@@ -8,7 +8,7 @@ on:
 env:
   REGISTRY: ghcr.io
   # github.repository as <account>/<repo>
-  APP_IMAGE:  ghcr.io/graemeprescott/leif/${{ github.ref_name }}/app
+  APP_IMAGE: ghcr.io/graemeprescott/leif/${{ github.ref_name }}/app
 
 jobs:
   build-builder:
@@ -80,3 +80,18 @@ jobs:
           docker build -t $LATEST_IMAGE -t $BUILD_IMAGE --cache-from $LATEST_IMAGE --build-arg builder_image=$BUILDER_IMAGE -f docker/build.Dockerfile .
           docker push --all-tags ${{ env.APP_IMAGE }}
           echo "image-uri=$BUILD_IMAGE" >> $GITHUB_OUTPUT
+  deploy:
+    name: Push block to Contensis
+    runs-on: ubuntu-latest
+    needs: build-app
+    steps:
+      - name: Push block to Contensis
+        id: push-block
+        uses: contensis/block-push@v1
+        with:
+          block-id: concept-website
+          alias: bolton
+          project-id: concept
+          client-id: ${{ secrets.CONTENSIS_CLIENT_ID }}
+          shared-secret: ${{ secrets.CONTENSIS_SHARED_SECRET }}
+          image-uri: ${{ env.APP_IMAGE }}:build-${{ github.run_number }}
