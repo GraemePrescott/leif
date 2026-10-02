@@ -5,7 +5,7 @@ on:
   workflow_call:
     inputs:
       block-id:
-        required: true
+        default: concept-website
         type: string
       auto-release:
         default: false
