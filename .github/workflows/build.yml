@@ -81,13 +81,3 @@ jobs:
           docker push --all-tags ${{ env.APP_IMAGE }}
           echo "image-uri=$BUILD_IMAGE" >> $GITHUB_OUTPUT
            
-      deploy:
-        - name: Deploy block to Contensis
-          needs: build-app
-          uses: ./.github/workflows/push-block.yml
-          with:
-            block-id: concept-website
-            image-uri: ${{ needs.build-app.outputs.image-uri }}
-            project-id: concept
-            alias: bolton
-            secrets: inherit     
