@@ -14,10 +14,10 @@ on:
         required: true
         type: string
       alias:
-        default: leif
+        default: bolton
         type: string
       project-id:
-        default: website
+        default: concept
         type: string
       tag-repo:
         default: false
