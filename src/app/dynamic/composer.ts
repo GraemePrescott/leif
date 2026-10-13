@@ -15,6 +15,7 @@ import { Props as TestimonialSliderProps } from '~/components/testimonialSlider/
 import { Props as TextBlockProps } from '~/components/textBlock/TextBlock';
 import { Props as TwitterCardProps } from '~/components/twitterCard/TwitterCard';
 import { Props as VideoPlayerProps } from '~/components/videoPlayer/VideoPlayer';
+import { Props as TabbedContentProps } from '~/components/tabbedContent/TabbedContent';
 import { Props as CTABannerProps } from '~/components/ctaBanner/CTABanner';
 
 export const Accordion = loadable<AccordionProps>(
@@ -94,6 +95,12 @@ export const TwitterCard = loadable<TwitterCardProps>(
   () =>
     import(
       /* webpackChunkName: "twitter-card" */ '~/components/twitterCard/TwitterCard'
+    )
+);
+export const TabbedContent = loadable<TabbedContentProps>(
+  () =>
+    import(
+      /* webpackChunkName: "tabbed-content" */ '~/components/tabbedContent/TabbedContent'
     )
 );
 export const VideoPlayer = loadable<VideoPlayerProps>(

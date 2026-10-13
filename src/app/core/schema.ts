@@ -165,6 +165,7 @@ export const ComposerComponents = {
   markup: 'markup',
   productSlider: 'productSlider',
   promotedProduct: 'promotedProduct',
+  tabbedContent: 'tabbedContent',
   textBlock: 'textBlock',
   twitterEmbed: 'twitterEmbed',
   video: 'video',

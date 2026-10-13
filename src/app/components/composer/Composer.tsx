@@ -11,6 +11,7 @@ import {
   ProductSlider,
   PromotionalBlock,
   QuoteBlock,
+  TabbedContent,
   TestimonialSlider,
   TextBlock,
   TwitterCard,
@@ -129,6 +130,13 @@ const ComposerComponent = (composerProps: Props) => {
     return (
       <Region width={isContentPage ? 'msmall' : 'medium'} margin="large">
         <VideoPlayer {...props} />
+      </Region>
+    );
+  }
+  if (props._type === 'tabbedContent') {
+    return (
+      <Region width={isContentPage ? 'msmall' : 'small'} margin="medium">
+        <TabbedContent {...props} />
       </Region>
     );
   }

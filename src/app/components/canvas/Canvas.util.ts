@@ -10,6 +10,7 @@ import FeaturedProductCanvas from '~/components/featuredProduct/FeaturedProduct.
 import FeatureRowCanvas from '~/components/cardRow/CardRow.canvas';
 import AccordionCanvas from '~/components/accordion/Accordion.canvas';
 import ParagraphBlock from '~/components/canvas/blocks/ParagraphCanvas.block';
+import TabbedContentCanvas from '~/components/tabbedContent/TabbedContent.canvas';
 
 export const blocks = {
   _paragraph: ParagraphBlock,
@@ -24,4 +25,5 @@ export const components = {
   featuredProduct: FeaturedProductCanvas,
   cardRow: FeatureRowCanvas,
   accordionGroup: AccordionCanvas,
+  tabGroup: TabbedContentCanvas,
 };

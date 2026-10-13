@@ -1,4 +1,5 @@
 // Props Models
+// import { Props as TabBoxProps } from '~/components/tabBox/TabBox';
 import { Props as AccordionProps } from '~/components/accordion/Accordion';
 import { Props as CalloutProps } from '~/components/callout/Callout';
 import { Props as ContentBlockRowProps } from '~/components/contentBlockRow/ContentBlockRow';
@@ -16,6 +17,7 @@ import { Props as VideoPlayerProps } from '~/components/videoPlayer/VideoPlayer'
 
 export type Props = { isContentPage?: boolean } & (
   | ({ _type: 'accordionList' } & AccordionProps)
+  //| ({ _type: 'tabBox' } & TabBoxProps)
   | ({ _type: 'callout' } & CalloutProps)
   | ({ _type: 'contentBlockRow' } & ContentBlockRowProps)
   | ({ _type: 'featuredProduct' } & FeaturedProductProps)
