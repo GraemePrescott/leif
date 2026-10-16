@@ -12,6 +12,7 @@ import {
   PromotionalBlock,
   QuoteBlock,
   TabbedContent,
+  MapCard,
   TestimonialSlider,
   TextBlock,
   TwitterCard,
@@ -137,6 +138,13 @@ const ComposerComponent = (composerProps: Props) => {
     return (
       <Region width={isContentPage ? 'msmall' : 'small'} margin="medium">
         <TabbedContent {...props} />
+      </Region>
+    );
+  }
+  if (props._type === 'mapCard') {
+    return (
+      <Region width={isContentPage ? 'msmall' : 'small'} margin="medium">
+        <MapCard {...props} />
       </Region>
     );
   }

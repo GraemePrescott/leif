@@ -7,7 +7,7 @@ import PromotedContent from '~/components/promotedContent/PromotedContent';
 import ContentHero from '~/components/contentHero/ContentHero';
 import Metadata from '~/components/metadata/Metadata';
 import Form from '~/components/form/Form';
-// import TabBox from '~/components/tabBox/TabBox';
+import MapCard from '~/components/mapCard/MapCard';
 
 // Layout
 import ContentPageStyled from './ContentPage.styled';

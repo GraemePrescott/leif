@@ -166,6 +166,7 @@ export const ComposerComponents = {
   productSlider: 'productSlider',
   promotedProduct: 'promotedProduct',
   tabbedContent: 'tabbedContent',
+  mapCard: 'mapCard',
   textBlock: 'textBlock',
   twitterEmbed: 'twitterEmbed',
   video: 'video',

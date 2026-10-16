@@ -16,6 +16,7 @@ import { Props as TextBlockProps } from '~/components/textBlock/TextBlock';
 import { Props as TwitterCardProps } from '~/components/twitterCard/TwitterCard';
 import { Props as VideoPlayerProps } from '~/components/videoPlayer/VideoPlayer';
 import { Props as TabbedContentProps } from '~/components/tabbedContent/TabbedContent';
+import { Props as MapCardProps } from '~/components/mapCard/MapCard';
 import { Props as CTABannerProps } from '~/components/ctaBanner/CTABanner';
 
 export const Accordion = loadable<AccordionProps>(
@@ -102,6 +103,10 @@ export const TabbedContent = loadable<TabbedContentProps>(
     import(
       /* webpackChunkName: "tabbed-content" */ '~/components/tabbedContent/TabbedContent'
     )
+);
+export const MapCard = loadable<MapCardProps>(
+  () =>
+    import(/* webpackChunkName: "map-card" */ '~/components/mapCard/MapCard')
 );
 export const VideoPlayer = loadable<VideoPlayerProps>(
   () =>

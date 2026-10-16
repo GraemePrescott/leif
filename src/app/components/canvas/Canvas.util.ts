@@ -11,6 +11,7 @@ import FeatureRowCanvas from '~/components/cardRow/CardRow.canvas';
 import AccordionCanvas from '~/components/accordion/Accordion.canvas';
 import ParagraphBlock from '~/components/canvas/blocks/ParagraphCanvas.block';
 import TabbedContentCanvas from '~/components/tabbedContent/TabbedContent.canvas';
+import MapCardCanvas from '~/components/mapCard/MapCard.canvas';
 
 export const blocks = {
   _paragraph: ParagraphBlock,
@@ -26,4 +27,5 @@ export const components = {
   cardRow: FeatureRowCanvas,
   accordionGroup: AccordionCanvas,
   tabGroup: TabbedContentCanvas,
+  mapCard: MapCardCanvas,
 };
